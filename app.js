@@ -3,6 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const reactSsrMiddleware = require('./middlewares/ssr');
+const authRouter = require('./routes/auth_router');
 
 const app = express();
 
@@ -38,6 +39,8 @@ app.use(session(sessionConfig));
 app.use(reactSsrMiddleware);
 
 app.use(getUser);
+
+app.use('/auth', authRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => {
