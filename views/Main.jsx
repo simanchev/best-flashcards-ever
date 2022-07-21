@@ -4,9 +4,9 @@ const TopicList = require('./TopicList');
 const Nav = require('./Nav');
 
 
-function Main({ title, arrTopics }) {
+function Main({ arrTopics }) {
   return (
-    <Layout title={title}>
+    <Layout>
       <Nav />
       <div className="container-fluid">
         <h4 style={{ textAlign: 'center' }}>Тему давай выбирай, ну</h4>

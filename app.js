@@ -2,13 +2,14 @@ require('@babel/register');
 const express = require('express');
 const path = require('path');
 const mainRouter = require('./routes/main.route');
-const questRouter = require('./routes/main.route');
+const questRouter = require('./routes/quest.router');
 
 const app = express();
 
 const PORT = process.env.PORT ?? 3000;
 
 app.use('/', mainRouter);
+app.use('/quest', questRouter);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, async () => {

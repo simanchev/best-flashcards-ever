@@ -33,3 +33,15 @@
   font-size: 14px;
   margin: 0;
 }
+
+.question {
+  margin-bottom: 30px;
+}
+
+.list-group-item {
+  padding: 20px !important;
+}
+
+.form-check-label {
+  margin-left: 15px;
+}
