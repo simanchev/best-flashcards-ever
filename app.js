@@ -2,6 +2,7 @@ require('@babel/register');
 const express = require('express');
 const path = require('path');
 const mainRouter = require('./routes/main.route');
+const questRouter = require('./routes/main.route');
 
 const app = express();
 

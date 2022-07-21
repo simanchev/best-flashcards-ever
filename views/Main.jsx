@@ -9,7 +9,7 @@ function Main({ title, arrTopics }) {
     <Layout title={title}>
       <Nav />
       <div className="container-fluid">
-        <h3 style={{ textAlign: 'center' }}>Тему выбирай</h3>
+        <h4 style={{ textAlign: 'center' }}>Тему давай выбирай, ну</h4>
       </div>
       <div className="container-fluid">
         <TopicList arrTopics={arrTopics} />

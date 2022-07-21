@@ -6,10 +6,14 @@ const { Topic } = require('../db/models');
 
 /* GET home page. */
 router.get('/', async (req, res) => {
-  const arrTopics = await Topic.findAll({ raw: true });
-  const main = React.createElement(Main, { title: 'title', arrTopics });
+  // const arrTopics = await Topic.findAll({ raw: true });
+  const arrTopics = [
+    { id: 1, title: 'topic-1' },
+    { id: 2, title: 'topic-2' },
+    { id: 3, title: 'topic-3' },
+    { id: 4, title: 'topic-4' }];
+  const main = React.createElement(Main, { arrTopics });
   const html = ReactDOMServer.renderToStaticMarkup(main);
-  console.log(arrTopics);
   res.write('<!DOCTYPE html>');
   res.end(html);
 });
