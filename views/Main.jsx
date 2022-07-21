@@ -4,12 +4,12 @@ const TopicList = require('./TopicList');
 const Nav = require('./Nav');
 
 
-function Main({ title, arrTopics }) {
+function Main({ arrTopics }) {
   return (
-    <Layout title={title}>
+    <Layout>
       <Nav />
       <div className="container-fluid">
-        <h3 style={{ textAlign: 'center' }}>Тему выбирай</h3>
+        <h4 style={{ textAlign: 'center' }}>Тему давай выбирай, ну</h4>
       </div>
       <div className="container-fluid">
         <TopicList arrTopics={arrTopics} />
