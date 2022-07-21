@@ -21,10 +21,10 @@ authRouter.get('/reg', async (req, res) => {
           { email },
       });
       if (password !== passwordrepeat) {
-        res.json('ПАРОЛИ НЕ СОВПАДАЮТ!');
+        res.json('Пароли не совпадают, пожалуйста попробуйте снова!');
       }
       if (user) {
-        res.json('ТАКОЙ БРО УЖЕ СУЩЕСТВУЕТ');
+        res.json('Йоу бро, такие лица уже есть на нашем районе, так повтори же кто ты? ( такой пользователь уже есть в системе)');
       }
       const hash = await bcrypt.hash(password, 10);
       const newUser = await User.create({
