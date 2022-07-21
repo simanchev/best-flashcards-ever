@@ -1,9 +1,10 @@
 const React = require('react');
 const Layout = require('./Layout');
-const TopicCard = require('./TopicCard');
+const TopicList = require('./TopicList');
 const Nav = require('./Nav');
 
-function Main({ title }) {
+
+function Main({ title, arrTopics }) {
   return (
     <Layout title={title}>
       <Nav />
@@ -11,12 +12,7 @@ function Main({ title }) {
         <h3 style={{ textAlign: 'center' }}>Тему выбирай</h3>
       </div>
       <div className="container-fluid">
-        <ul className="topics-list">
-          <TopicCard />
-          <TopicCard />
-          <TopicCard />
-          <TopicCard />
-        </ul>
+        <TopicList arrTopics={arrTopics} />
       </div>
     </Layout>
   );
