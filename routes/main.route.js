@@ -6,7 +6,7 @@ const Main = require('../views/Main');
 
 /* GET home page. */
 router.get('/', (req, res) => {
-  const main = React.createElement(Main, { title: 'Lexa' });
+  const main = React.createElement(Main, { title: 'Flashcards' });
   const html = ReactDOMServer.renderToStaticMarkup(main);
   res.write('<!DOCTYPE html>');
   res.end(html);
