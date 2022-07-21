@@ -5,7 +5,7 @@ function Nav() {
     <nav className="navbar bg-light">
       <div className="container-fluid">
         <div>
-        <a href=""><h2>Flashcards</h2></a>
+        <a href="/"><h2>Flashcards</h2></a>
           <p className="title-desc">extra super duper trooper ultra maxi hyper mega game ever</p>
         </div>
         <ul className="nav justify-content-end">
