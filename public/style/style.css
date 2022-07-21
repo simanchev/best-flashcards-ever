@@ -1,8 +1,13 @@
-body {
-  margin-left: 40px !important;
-  margin-right: 40px !important;
+.container-fluid {
+  padding: 0 50px !important;
 }
 
 .navbar {
   margin-bottom: 50px !important;
+}
+
+.topics-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
 }
