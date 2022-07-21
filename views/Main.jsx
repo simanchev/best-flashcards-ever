@@ -13,9 +13,6 @@ function Main({ title }) {
       <div className="container-fluid">
         <ul className="topics-list">
           <TopicCard />
-          <TopicCard />
-          <TopicCard />
-          <TopicCard />
         </ul>
       </div>
     </Layout>
