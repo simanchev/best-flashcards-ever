@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 const Nav = require('./Nav');
 
 function Result({ data }) {
-    // console.log(arrTopics)
+  // console.log(arrTopics)
   // const arrTopics = [
   //   { title: 'topic-1', score: 5, percent: '100%' },
   //   { title: 'topic-2', score: 4, percent: '75%' },
@@ -35,7 +35,7 @@ function Result({ data }) {
             ))}
           </tbody>
         </table>
-        <button type="submit" className="btn btn-primary">Обратно к темам</button>
+        <a href="/"><button  type="click" className="btn tohome btn-primary">Обратно к темам</button></a>
       </div>
     </Layout>
   );

@@ -6,7 +6,7 @@ function TopicCard({ id, topic }) {
       <img src="/src/demo-img.png" className="card-img-top" alt="..." />
       <div className="card-body">
         <p className="card-text">{topic}</p>
-        <a href={'quest/' + id} target="_self" id={id}><button type="button" className="btn btn-primary">Погнали</button></a>
+        <a href={'quest/' + id} target="_self"><button type="button" id={id} className="btn btn-primary">Погнали</button></a>
         {/* <button type="button" className="btn btn-secondary">Тут уже были</button> */}
       </div>
     </li>

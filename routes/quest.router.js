@@ -3,6 +3,7 @@ const ReactDOMServer = require('react-dom/server');
 const React = require('react');
 const Quest = require('../views/Quest');
 const Result = require('../views/Result');
+
 const { QuestionAnswer, UserTopic } = require('../db/models');
 
 /* GET topic questions. */
@@ -79,8 +80,8 @@ router.post('/', async (req, res) => {
   const currId = quest2.id;
 
   if (arrLast.includes(currId)) {
-    const objTotransfer = {}
-    objTotransfer.data = arrTopics
+    const objTotransfer = {};
+    objTotransfer.data = arrTopics;
     const result = React.createElement(Result, objTotransfer);
     const html = ReactDOMServer.renderToStaticMarkup(result);
 
