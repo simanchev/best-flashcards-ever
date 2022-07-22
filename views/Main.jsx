@@ -3,11 +3,11 @@ const Layout = require('./Layout');
 const TopicList = require('./TopicList');
 const Nav = require('./Nav');
 
-
-function Main({ arrTopics }) {
+function Main({ arrTopics, user }) {
   return (
-    <Layout>
-      <Nav />
+    <Layout title="Flashcards">
+      <Nav user={user} />
+
       <div className="container-fluid">
         <h4 style={{ textAlign: 'center' }}>Тему давай выбирай, ну</h4>
       </div>
@@ -17,5 +17,4 @@ function Main({ arrTopics }) {
     </Layout>
   );
 }
-
 module.exports = Main;

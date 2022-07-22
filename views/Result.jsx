@@ -35,7 +35,7 @@ function Result({ data }) {
             ))}
           </tbody>
         </table>
-        <a href="/"><button  type="click" className="btn tohome btn-primary">Обратно к темам</button></a>
+        <a href="/"><button type="click" className="btn tohome btn-primary">Обратно к темам</button></a>
       </div>
     </Layout>
   );
