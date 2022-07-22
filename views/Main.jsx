@@ -1,22 +1,19 @@
 const React = require('react');
 const Layout = require('./Layout');
-const TopicCard = require('./TopicCard');
+const TopicList = require('./TopicList');
 const Nav = require('./Nav');
 
-function Main({ title, user }) {
+
+function Main({ arrTopics, user }) {
   return (
     <Layout title={title}>
       <Nav user={user}/>
+
       <div className="container-fluid">
-        <h3 style={{ textAlign: 'center' }}>Тему выбирай</h3>
+        <h4 style={{ textAlign: 'center' }}>Тему давай выбирай, ну</h4>
       </div>
       <div className="container-fluid">
-        <ul className="topics-list">
-          <TopicCard />
-          <TopicCard />
-          <TopicCard />
-          <TopicCard />
-        </ul>
+        <TopicList arrTopics={arrTopics} />
       </div>
     </Layout>
   );

@@ -5,7 +5,10 @@ function Nav({ user }) {
   return (
     <nav className="navbar bg-light">
       <div className="container-fluid">
-        <h1>Flashcards</h1>
+        <div>
+        <a href="/"><h2>Flashcards</h2></a>
+          <p className="title-desc">extra super duper trooper ultra maxi hyper mega game ever</p>
+        </div>
         <ul className="nav justify-content-end">
 
           {user ? (

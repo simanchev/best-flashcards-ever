@@ -1,14 +1,21 @@
 .container-fluid {
   padding: 0 50px !important;
+  max-width: 1300px;
 }
 
 .navbar {
-  margin-bottom: 50px !important;
+  margin-bottom: 70px !important;
+  padding: 15px 0 !important;
+}
+
+.navbar a {
+  text-decoration: none;
 }
 
 .topics-list {
   display: flex;
   justify-content: space-between;
+
   margin-top: 50px;
 }
 
@@ -47,3 +54,47 @@ form[name="editForm"] {
   align-items: center;
   margin-top: 50px;
 }
+
+  flex-wrap: wrap;
+  margin-top: 70px;
+  padding: 0;
+}
+
+.card-text {
+  font-weight: 700;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.title-desc {
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0;
+}
+
+.question {
+  margin-bottom: 30px;
+}
+
+.list-group {
+  margin-bottom: 30px !important;
+}
+
+.list-group-item {
+  padding: 20px !important;
+}
+
+.form-check-label {
+  margin-left: 15px;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.check {
+  margin-bottom: 30px;;
+}
+

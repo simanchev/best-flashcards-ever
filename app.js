@@ -1,5 +1,6 @@
 require('@babel/register');
 const express = require('express');
+
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const FileStore = require('session-file-store')(session);
@@ -7,6 +8,7 @@ const path = require('path');
 const reactSsrMiddleware = require('./middlewares/ssr');
 const authRouter = require('./routes/auth_router');
 const mainRouter = require('./routes/main.route');
+const questRouter = require('./routes/quest.router');
 const getUser = require('./middlewares/getUser');
 
 const app = express();
@@ -46,8 +48,19 @@ app.use(getUser);
 
 app.use('/auth', authRouter);
 app.use('/', mainRouter);
+app.use('/quest', questRouter);
 
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Сервачок шуршит, а вода бежит, солнце делает все больше оборотов , мне тут уж больше  ${PORT} лет`);
+
+
+app.listen(PORT, async () => {
+  try {
+    console.log(`Server started at ${PORT} port`);
+    //   await sequelize.authenticate();
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
 });
+
+// app.listen(PORT, () => console.log(`Server work at ${PORT} port`))
+

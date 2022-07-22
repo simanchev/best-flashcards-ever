@@ -4,8 +4,10 @@
   "description": "## Общая информация  Мы собираемся создать веб-приложение для флэш-карт. Наше приложение предоставит пользователям возможность использования флэш-карты.  Пользователь выберет колоду и сыграет партию с флэш-картами.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js --ext js, jsx, json --ignore session"
+
+    "start": "node app.js --ext js, jsx, json",
+    "dev": "nodemon app.js --ignore session"
+
   },
   "repository": {
     "type": "git",
