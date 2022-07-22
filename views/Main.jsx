@@ -3,9 +3,9 @@ const Layout = require('./Layout');
 const TopicList = require('./TopicList');
 const Nav = require('./Nav');
 
-function Main({ title, user, arrTopics }) {
+function Main({ arrTopics, user }) {
   return (
-    <Layout title={title}>
+    <Layout title="Flashcards">
       <Nav user={user} />
 
       <div className="container-fluid">

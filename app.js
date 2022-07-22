@@ -51,6 +51,13 @@ app.use('/', mainRouter);
 app.use('/quest', questRouter);
 
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Сервачок шуршит, а вода бежит, солнце делает все больше оборотов , мне тут уж больше  ${PORT} лет`);
+
+
+app.listen(PORT, async () => {
+  try {
+    console.log(`Server started at ${PORT} port`);
+    //   await sequelize.authenticate();
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
 });
