@@ -1,6 +1,6 @@
 .container-fluid {
   padding: 0 50px !important;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 
 .navbar {
@@ -91,5 +91,9 @@ form[name="editForm"] {
 
 .check {
   margin-bottom: 30px;
-  ;
 }
+
+.table {
+  margin-bottom: 30px !important;
+}
+

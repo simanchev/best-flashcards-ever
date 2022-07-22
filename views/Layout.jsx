@@ -14,6 +14,7 @@ function Layout({ title, children, user }) {
         <title>{title}</title>
       </head>
       <body>
+        <div className="lexa" />
         {children}
       </body>
     </html>
