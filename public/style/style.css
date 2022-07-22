@@ -1,0 +1,106 @@
+.container-fluid {
+  padding: 0 50px !important;
+  max-width: 1400px;
+}
+
+.navbar {
+  margin-bottom: 70px !important;
+  padding: 15px 0 !important;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.topics-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+form[name="editForm"] {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  gap: 20px;
+}
+
+.edit_form-button {
+  width: 150px;
+  border-radius: 15px;
+  outline: none;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding: 5px 20px;
+  margin: 0 auto;
+}
+
+.edit_form-button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.form__add {
+  margin-bottom: 50px;
+  width: 473px;
+  align-items: center;
+}
+
+.form-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  /* TODO conflict? */
+  flex-wrap: wrap;
+  margin-top: 70px;
+  padding: 0;
+}
+
+.card-text {
+  font-weight: 700;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.title-desc {
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0;
+}
+
+.question {
+  margin-bottom: 30px;
+}
+
+.list-group {
+  margin-bottom: 30px !important;
+}
+
+.list-group-item {
+  padding: 20px !important;
+}
+
+.form-check-label {
+  margin-left: 15px;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.check {
+  /* TODO conflict? */
+  margin-bottom: 30px;
+}
+
+.table {
+  /* TODO conflict? */
+  margin-bottom: 30px !important;
+  margin-bottom: 30px;
+}
