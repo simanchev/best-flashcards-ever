@@ -8,9 +8,10 @@ router.get('/:id', (req, res) => {
   const { id } = req.params;
 
   const questObj = {
+    check: '',
     question: 'blabla-question',
-    answer_1: 'blabla-answer-1',
-    answer_2: 'blabla-answer-2',
+    answer_1: 'blabla-answer-1111',
+    answer_2: 'blabla-answer-2222',
     answer_correct: 'blabla-answer-3',
   };
 
@@ -19,5 +20,9 @@ router.get('/:id', (req, res) => {
   res.write('<!DOCTYPE html>');
   res.end(html);
 });
+
+router.post('/', (req, res) => {
+  console.log(req.body)
+})
 
 module.exports = router;
