@@ -1,6 +1,6 @@
 .container-fluid {
   padding: 0 50px !important;
-  max-width: 1300px;
+  max-width: 1400px;
 }
 
 .navbar {
@@ -55,5 +55,9 @@
 }
 
 .check {
-  margin-bottom: 30px;;
+  margin-bottom: 30px;
+}
+
+.table {
+  margin-bottom: 30px !important;
 }

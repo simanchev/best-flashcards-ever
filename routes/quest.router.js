@@ -2,7 +2,8 @@ const router = require('express').Router();
 const ReactDOMServer = require('react-dom/server');
 const React = require('react');
 const Quest = require('../views/Quest');
-const { QuestionAnswer } = require('../db/models');
+const Result = require('../views/Result');
+const { QuestionAnswer, UserTopic } = require('../db/models');
 
 /* GET topic questions. */
 router.get('/:id', async (req, res) => {
@@ -52,24 +53,49 @@ router.post('/', async (req, res) => {
   console.log(req.body);
   let check1;
   const arrLast = [5, 10, 15, 20];
+  const idUser = 1; // ============================================================
+  const topicData = {
+    1: 'Программирование для малышей',
+    2: 'Фильмешки',
+    3: 'География для клоунов',
+    4: 'Отбитые познавашки',
+  };
   const { answer, question } = req.body;
   const quest1 = await QuestionAnswer.findAll({ raw: true });
+  const userTopic = await UserTopic.findAll({ raw: true });
+  const userStat = userTopic.filter((el) => el.id_user === idUser);
+  const arrTopics = [];
+  for (let i = 0; i < 4; i++) {
+    if (userStat[i]) {
+      const topicId = userStat[i].id_topic;
+      const title = topicData[topicId];
+      arrTopics.push({ title, score: userStat[i].score, percent: `${Math.round(userStat[i].score / 5 * 100)}%` });
+    } else {
+      arrTopics.push({ title: '-', score: '-', percent: '-' });
+    }
+  }
 
   const quest2 = quest1.find((el) => el.question === question);
-
   const currId = quest2.id;
+
   if (arrLast.includes(currId)) {
-  // кидаем стату
-    res.send('Статистика лехи');
+    const objTotransfer = {}
+    objTotransfer.data = arrTopics
+    const result = React.createElement(Result, objTotransfer);
+    const html = ReactDOMServer.renderToStaticMarkup(result);
+
+    res.write('<!DOCTYPE html>');
+    res.end(html);
+    // res.send(arrTopics);
   } else {
     const nextObj = quest1.find((el) => el.id === quest2.id + 1);
 
     const newObj = quest1.find((el) => el.correct_answer === answer && question === el.question);
     if (newObj) {
-      check1 = 'ВЕРНО!';
+      check1 = 'УмНяШка, уГаДаЛ  <3!';
       console.log(check1);
     } else {
-      check1 = 'НЕВЕРНО!';
+      check1 = 'На ПОВТОР!';
     }
 
     console.log(newObj);
