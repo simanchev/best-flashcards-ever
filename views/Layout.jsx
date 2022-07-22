@@ -12,6 +12,7 @@ function Layout({ children }) {
         <title>Flashcards</title>
       </head>
       <body>
+        <div className="lexa" />
         {children}
       </body>
     </html>
