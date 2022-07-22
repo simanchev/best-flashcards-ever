@@ -1,6 +1,6 @@
 const React = require('react');
 
-function TopicCard({ id }) {
+function TopicCard({ id, user }) {
   return (
     <li className="card" id={id} style={{ width: '18rem' }}>
       <img src="/src/demo-img.png" className="card-img-top" alt="..." />
