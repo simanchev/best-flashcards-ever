@@ -7,6 +7,7 @@ const path = require('path');
 const reactSsrMiddleware = require('./middlewares/ssr');
 const authRouter = require('./routes/auth_router');
 const mainRouter = require('./routes/main.route');
+const questRouter = require('./routes/quest.router');
 const getUser = require('./middlewares/getUser');
 
 const app = express();
@@ -46,6 +47,7 @@ app.use(getUser);
 
 app.use('/auth', authRouter);
 app.use('/', mainRouter);
+app.use('/quest', questRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => {
